@@ -1,47 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Vishal Kumar - Portfolio</title>
-    
-        <!-- SEO Meta Tags -->
-        <meta name="description" content="I'm Vishal Kumar, a skilled web developer specializing in C, C++, Python, and full-stack development. Check out my projects and contact me!">
-        <meta name="keywords" content="Vishal Kumar, Web Developer, Portfolio, Freelancer, Full Stack Developer">
-        <meta name="author" content="Vishal Kumar">
-        <meta name="robots" content="index, follow">
-    
-        <!-- Tailwind CSS -->
-        <script src="https://cdn.tailwindcss.com"></script>
-    
-        <script>
-            function toggleDarkMode() {
-                document.documentElement.classList.toggle('dark');
-            }
-        </script>
-    
-        <style>
-            /* Gradient Background Animation */
-            @keyframes gradientBG {
-                0% { background-position: 0% 50%; }
-                50% { background-position: 100% 50%; }
-                100% { background-position: 0% 50%; }
-            }
-            .animated-bg {
-                background: linear-gradient(45deg, #4f46e5, #8b5cf6, #ec4899, #ef4444);
-                background-size: 300% 300%;
-                animation: gradientBG 6s infinite alternate ease-in-out;
-            }
-        </style>
-    </head>
-    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vishal Kumar - Portfolio (VK18)</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="I'm Vishal Kumar (VK18), a skilled web developer specializing in C, C++, Python, and full-stack development. Explore my projects and services.">
+    <meta name="keywords" content="Vishal Kumar, VK18, Vishal Kumar 18, Web Developer, Portfolio, Freelancer, Full Stack Developer, C, C++, Python, JavaScript, Node.js">
+    <meta name="author" content="Vishal Kumar 18">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph (Facebook & LinkedIn) -->
+    <meta property="og:title" content="Vishal Kumar (VK18) - Web Developer">
+    <meta property="og:description" content="Explore my portfolio and projects. Connect with me for web development and freelance work.">
+    <meta property="og:image" content="https://vkboss49264.github.io/My-portfolio/images/vk.png">
+    <meta property="og:url" content="https://vkboss49264.github.io/My-portfolio/">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Vishal Kumar (VK18) - Web Developer">
+    <meta name="twitter:description" content="Check out my portfolio, projects, and services.">
+    <meta name="twitter:image" content="https://vkboss49264.github.io/My-portfolio/images/vk.png">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        function toggleDarkMode() {
+            document.documentElement.classList.toggle('dark');
+        }
+    </script>
+
+    <style>
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        .animated-bg {
+            background: linear-gradient(45deg, #4f46e5, #8b5cf6, #ec4899, #ef4444);
+            background-size: 300% 300%;
+            animation: gradientBG 6s infinite alternate ease-in-out;
+        }
+    </style>
+</head>
 <body class="animated-bg text-white font-sans">
 
     <!-- Navigation -->
     <nav class="flex justify-between p-4 bg-black bg-opacity-30 backdrop-blur-md shadow-md">
-        <h1 class="text-3xl font-extrabold">Vishal Kumar</h1>
+        <h1 class="text-3xl font-extrabold">Vishal Kumar (VK18)</h1>
         <ul class="flex space-x-6">
-            <li><a href="index.html" class="hover:text-yellow-300">Home</a></li>
             <li><a href="about.html" class="hover:text-yellow-300">About</a></li>
             <li><a href="projects.html" class="hover:text-yellow-300">Projects</a></li>
             <li><a href="contact.html" class="hover:text-yellow-300">Contact</a></li>
@@ -51,59 +61,45 @@
 
     <!-- Hero Section -->
     <header class="text-center mt-20">
-        <h1 class="text-6xl font-bold opacity-0 animate-fade-in">Hi, I'm <span class="text-yellow-300">Vishal Kumar</span></h1>
-        <p class="text-xl mt-4 animate-slide-up">Web Developer | Tech Enthusiast | Problem Solver</p>
-        <a href="projects.html" class="mt-6 inline-block px-6 py-3 bg-yellow-300 text-gray-900 rounded-lg shadow-md hover:bg-yellow-400 animate-bounce">
-            View My Work
-        </a>
+        <img src="images/vk.png" alt="Vishal Kumar 18" class="w-32 h-32 mx-auto rounded-full shadow-lg">
+        <h1 class="text-6xl font-bold">Hi, I'm <span class="text-yellow-300">Vishal Kumar 18 (VK18)</span></h1>
+        <p class="text-xl mt-4">Web Developer | Tech Enthusiast | Problem Solver</p>
     </header>
 
     <!-- About Section -->
-    <section class="text-center mt-20 px-6">
-        <h2 class="text-4xl font-bold opacity-0 animate-fade-in">About Me</h2>
-        <p class="mt-4 max-w-3xl mx-auto animate-slide-up">
+    <section id="about" class="text-center mt-20 px-6">
+        <h2 class="text-4xl font-bold">About Me</h2>
+        <p class="mt-4 max-w-3xl mx-auto">
             I'm a passionate Web Developer with expertise in **HTML, CSS, JavaScript, and Node.js**. 
-            I enjoy solving complex problems and building innovative solutions. 
             Currently pursuing my **B.Tech in Computer Science and Engineering** from Dronacharya College.
         </p>
     </section>
 
     <!-- Projects Section -->
-    <section class="text-center mt-20 px-6">
-        <h2 class="text-4xl font-bold opacity-0 animate-fade-in">Featured Projects</h2>
+    <section id="projects" class="text-center mt-20 px-6">
+        <h2 class="text-4xl font-bold">Featured Projects</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6 max-w-4xl mx-auto">
-            <div class="bg-black bg-opacity-40 p-6 shadow-md rounded-lg hover:scale-105 transition-transform">
+            <div class="bg-black bg-opacity-40 p-6 shadow-md rounded-lg">
                 <h3 class="text-2xl font-bold text-yellow-300">🎬 Video Player Website</h3>
                 <p class="mt-2">A student-focused video player with no ads.</p>
                 <a href="https://vkboss49264.github.io/videosplayer/" target="_blank" class="text-yellow-400 hover:underline">View Project</a>
             </div>
-            <div class="bg-black bg-opacity-40 p-6 shadow-md rounded-lg hover:scale-105 transition-transform">
+            <div class="bg-black bg-opacity-40 p-6 shadow-md rounded-lg">
                 <h3 class="text-2xl font-bold text-yellow-300">💼 Job Opportunities Website</h3>
-                <p class="mt-2">A platform to help transgender people and those in need find jobs.</p>
+                <p class="mt-2">A platform to help underserved communities find jobs.</p>
                 <a href="https://vkboss49264.github.io/business-website/" target="_blank" class="text-yellow-400 hover:underline">View Project</a>
             </div>
         </div>
     </section>
 
-    <!-- Experience & Education -->
-    <section class="text-center mt-20 px-6">
-        <h2 class="text-4xl font-bold opacity-0 animate-fade-in">Experience & Education</h2>
-        <div class="max-w-4xl mx-auto mt-6">
-            <p class="text-lg animate-slide-up">🎓 **B.Tech in Computer Science** - Dronacharya College</p>
-            <p class="text-lg mt-2 animate-slide-up">💻 Web Development - Frontend & Backend</p>
-            <p class="text-lg mt-2 animate-slide-up">🔧 Languages - **C, C++, Python, JavaScript**</p>
-        </div>
-    </section>
-
-    <!-- Contact CTA -->
-    <section class="text-center mt-20 px-6">
-        <h2 class="text-4xl font-bold opacity-0 animate-fade-in">Let's Connect!</h2>
-        <p class="mt-4 animate-slide-up">If you're interested in working together, feel free to reach out.</p>
-        <a href="contact.html" class="mt-6 inline-block px-6 py-3 bg-yellow-300 text-gray-900 rounded-lg shadow-md hover:bg-yellow-400 animate-bounce">
+    <!-- Contact Section -->
+    <section id="contact" class="text-center mt-20 px-6">
+        <h2 class="text-4xl font-bold">Let's Connect!</h2>
+        <p class="mt-4">Feel free to reach out for collaboration.</p>
+        <a href="mailto:vishalkumar049263@gmail.com" class="mt-6 inline-block px-6 py-3 bg-yellow-300 text-gray-900 rounded-lg shadow-md hover:bg-yellow-400">
             Contact Me
         </a>
     </section>
 
 </body>
 </html>
-
