@@ -44,6 +44,11 @@
             background-size: 300% 300%;
             animation: gradientBG 6s infinite alternate ease-in-out;
         }
+        img {
+    display: block !important;
+    visibility: visible !important;
+}
+
     </style>
 </head>
 <body class="animated-bg text-white font-sans">
@@ -59,13 +64,29 @@
         <button onclick="toggleDarkMode()" class="bg-gray-900 text-yellow-300 px-4 py-1 rounded-lg">Dark Mode</button>
     </nav>
 
-    <!-- Hero Section -->
     <header class="text-center mt-20">
-        <img src="images/vk.png" alt="Vishal Kumar 18" class="w-32 h-32 mx-auto rounded-full shadow-lg">
+        <!-- Profile Image -->
+        <img src="image/vk.png" alt="Vishal Kumar 18" class="w-32 h-32 mx-auto rounded-full shadow-lg cursor-pointer" onclick="openImage()">
         <h1 class="text-6xl font-bold">Hi, I'm <span class="text-yellow-300">Vishal Kumar 18 (VK18)</span></h1>
         <p class="text-xl mt-4">Web Developer | Tech Enthusiast | Problem Solver</p>
     </header>
-
+    
+    <!-- Full-Screen Image Modal (Hidden by Default) -->
+    <div id="imageModal" class="fixed top-0 left-0 w-full h-full bg-black bg-opacity-90 flex justify-center items-center hidden">
+        <img src="image/vk.png" alt="Vishal Kumar 18" class="max-w-full max-h-full">
+        <button class="absolute top-5 right-5 text-white text-3xl font-bold" onclick="closeImage()">✖</button>
+    </div>
+    
+    <script>
+        function openImage() {
+            document.getElementById('imageModal').classList.remove('hidden');
+        }
+    
+        function closeImage() {
+            document.getElementById('imageModal').classList.add('hidden');
+        }
+    </script>
+    
     <!-- About Section -->
     <section id="about" class="text-center mt-20 px-6">
         <h2 class="text-4xl font-bold">About Me</h2>
