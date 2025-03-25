@@ -3,95 +3,287 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects - Vishal Kumar</title>
+    <title>Projects - Vishal Kumar (VK18)</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Explore web development projects by Vishal Kumar (VK18) including a Free Fire tournament platform, student video player, and job portal application.">
+    
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        function toggleMenu() {
-            document.getElementById("menu").classList.toggle("hidden");
-        }
-    </script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
     <style>
-        /* Glassmorphism Effect */
-        .glass-card {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            border-radius: 15px;
-            padding: 20px;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            transition: transform 0.3s ease-in-out;
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
         }
-        .glass-card:hover {
+        
+        .gradient-bg {
+            background: linear-gradient(-45deg, #4f46e5, #8b5cf6, #ec4899, #ef4444);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+        }
+        
+        .card {
+            transition: all 0.3s ease;
+            background: rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(10px);
+        }
+        
+        .card:hover {
             transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+        }
+        
+        .project-tag {
+            display: inline-block;
+            background: rgba(251, 191, 36, 0.2);
+            color: #fbbf24;
+            padding: 2px 8px;
+            border-radius: 9999px;
+            font-size: 0.75rem;
+            margin-right: 6px;
+            margin-bottom: 6px;
+        }
+        
+        .nav-link {
+            position: relative;
+        }
+        
+        .nav-link:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background-color: #fbbf24;
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover:after {
+            width: 100%;
+        }
+        
+        .section {
+            scroll-margin-top: 80px;
         }
     </style>
 </head>
-<body class="bg-gradient-to-r from-blue-700 to-purple-700 text-white">
-
+<body class="gradient-bg text-white min-h-screen flex flex-col">
     <!-- Navigation -->
-    <nav class="flex justify-between items-center p-4 bg-white bg-opacity-10 shadow-lg text-white">
-        <h1 class="text-2xl font-bold">Vishal Kumar</h1>
-        <button class="lg:hidden text-2xl" onclick="toggleMenu()">☰</button>
-        <ul id="menu" class="hidden lg:flex space-x-6">
-            <li><a href="index.html" class="hover:text-yellow-400">Home</a></li>
-            <li><a href="about.html" class="hover:text-yellow-400">About</a></li>
-            <li><a href="projects.html" class="hover:text-yellow-400">Projects</a></li>
-            <li><a href="contact.html" class="hover:text-yellow-400">Contact</a></li>
-        </ul>
-    </nav>
-
-    <!-- Projects Section -->
-    <section class="max-w-6xl mx-auto p-8">
-        <h2 class="text-5xl font-extrabold text-center text-white drop-shadow-md">✨ My Projects ✨</h2>
-
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-10">
-            <!-- Video Player Website -->
-            <div class="glass-card">
-                <h3 class="text-2xl font-bold text-yellow-300">🎬 Video Player Website</h3>
-                <p class="mt-2">A distraction-free video player that plays YouTube videos without ads, likes, or shares.</p>
-                <ul class="mt-2 text-sm">
-                    <li>✔ Built with HTML, CSS, JavaScript</li>
-                    <li>✔ Uses Node.js for backend</li>
-                    <li>✔ Supports Dark Mode</li>
-                </ul>
-                <a href="https://vkboss49264.github.io/videosplayer/" target="_blank" class="block text-yellow-300 mt-4 font-bold hover:underline">🎥 Live Demo</a>
+    <nav class="sticky top-0 z-50 bg-black bg-opacity-80 backdrop-blur-md shadow-md">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold text-yellow-300">VK18</a>
+            
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex space-x-8">
+                <a href="index.html" class="nav-link text-white hover:text-yellow-300">Home</a>
+                <a href="about.html" class="nav-link text-white hover:text-yellow-300">About</a>
+                <a href="projects.html" class="nav-link text-yellow-300 font-medium">Projects</a>
+                <a href="contact.html" class="nav-link text-white hover:text-yellow-300">Contact</a>
             </div>
-
-            <!-- Hindi Subtitle Generator -->
-            <div class="glass-card">
-                <h3 class="text-2xl font-bold text-green-300">🎤 Hindi Subtitle Generator</h3>
-                <p class="mt-2">Generates Hindi subtitles for any video by recognizing audio in any language.</p>
-                <ul class="mt-2 text-sm">
-                    <li>✔ Uses AI-powered speech recognition</li>
-                    <li>✔ Supports multiple file formats</li>
-                    <li>✔ Processes videos in real-time</li>
-                </ul>
-                <a href="#" class="block text-green-300 mt-4 font-bold hover:underline">⏳ Live Demo (Coming Soon)</a>
-            </div>
-
-            <!-- Job Opportunities Website -->
-            <div class="glass-card">
-                <h3 class="text-2xl font-bold text-red-300">💼 Job Opportunities Website</h3>
-                <p class="mt-2">A platform connecting transgender and underprivileged people to job opportunities.</p>
-                <ul class="mt-2 text-sm">
-                    <li>✔ Firebase Authentication for secure logins</li>
-                    <li>✔ Allows users to post and apply for jobs</li>
-                    <li>✔ Includes profile and resume features</li>
-                </ul>
-                <a href="https://vkboss49264.github.io/business-website/" target="_blank" class="block text-red-300 mt-4 font-bold hover:underline">🚀 Live Demo</a>
+            
+            <!-- Mobile menu button -->
+            <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-black bg-opacity-90">
+            <div class="container mx-auto px-4 py-3 flex flex-col space-y-3">
+                <a href="index.html" class="text-white hover:text-yellow-300 py-2">Home</a>
+                <a href="about.html" class="text-white hover:text-yellow-300 py-2">About</a>
+                <a href="projects.html" class="text-yellow-300 font-medium py-2">Projects</a>
+                <a href="contact.html" class="text-white hover:text-yellow-300 py-2">Contact</a>
             </div>
         </div>
+    </nav>
 
-        <!-- Upcoming Features -->
-        <section class="mt-12 text-center">
-            <h2 class="text-4xl font-extrabold drop-shadow-md">🚀 Upcoming Features</h2>
-            <p class="mt-4 text-lg">I am continuously working on improving my projects.</p>
-            <ul class="mt-4 text-xl">
-                <li>🔹 AI-powered job recommendations.</li>
-                <li>🔹 Real-time subtitle processing enhancements.</li>
-                <li>🔹 User playlists & advanced features in the Video Player.</li>
-            </ul>
+    <main class="flex-grow container mx-auto px-4 py-8">
+        <!-- Projects Hero -->
+        <section class="text-center py-12">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">
+                My <span class="text-yellow-300">Projects</span>
+            </h1>
+            <p class="text-xl text-gray-300 max-w-2xl mx-auto">
+                Explore my web development work and gaming platform projects
+            </p>
         </section>
-    </section>
 
+        <!-- Featured Projects -->
+        <section class="max-w-5xl mx-auto mb-16">
+            <!-- Free Fire Tournament Project -->
+            <div class="card rounded-xl overflow-hidden mb-10">
+                <div class="md:flex">
+                    <div class="md:w-1/2 bg-gray-800 flex items-center justify-center p-8">
+                        <i class="fas fa-trophy text-8xl text-yellow-300"></i>
+                    </div>
+                    <div class="md:w-1/2 p-8">
+                        <h2 class="text-3xl font-bold text-yellow-300 mb-4">Free Fire Tournament Platform</h2>
+                        <p class="text-gray-300 mb-6">
+                            A complete esports tournament management system for Free Fire players. This platform allows gamers to register for tournaments, view schedules, check rankings, and participate in competitive matches. The backend handles player registration, match scheduling, and results tracking.
+                        </p>
+                        
+                        <div class="mb-6">
+                            <span class="project-tag">HTML5</span>
+                            <span class="project-tag">CSS3</span>
+                            <span class="project-tag">JavaScript</span>
+                            <span class="project-tag">Firebase</span>
+                            <span class="project-tag">Tournament System</span>
+                        </div>
+                        
+                        <div class="flex flex-wrap gap-3">
+                            <a href="https://vkboss49264.github.io/ff-tournament-backend/" target="_blank" class="px-4 py-2 bg-yellow-300 text-gray-900 rounded hover:bg-yellow-400 transition-colors font-medium">
+                                Live Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Video Player Project -->
+            <div class="card rounded-xl overflow-hidden mb-10">
+                <div class="md:flex flex-row-reverse">
+                    <div class="md:w-1/2 bg-gray-800 flex items-center justify-center p-8">
+                        <i class="fas fa-video text-8xl text-yellow-300"></i>
+                    </div>
+                    <div class="md:w-1/2 p-8">
+                        <h2 class="text-3xl font-bold text-yellow-300 mb-4">Student Video Player</h2>
+                        <p class="text-gray-300 mb-6">
+                            An ad-free, distraction-free video player designed specifically for educational content. Features include playback speed control, quality selection, and a clean interface optimized for learning. This project was created to help students focus on their studies without intrusive ads or unnecessary features.
+                        </p>
+                        
+                        <div class="mb-6">
+                            <span class="project-tag">HTML5 Video API</span>
+                            <span class="project-tag">Custom Controls</span>
+                            <span class="project-tag">JavaScript</span>
+                            <span class="project-tag">Education</span>
+                        </div>
+                        
+                        <div class="flex flex-wrap gap-3">
+                            <a href="https://vkboss49264.github.io/videosplayer/" target="_blank" class="px-4 py-2 bg-yellow-300 text-gray-900 rounded hover:bg-yellow-400 transition-colors font-medium">
+                                Live Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Job Portal Project -->
+            <div class="card rounded-xl overflow-hidden">
+                <div class="md:flex">
+                    <div class="md:w-1/2 bg-gray-800 flex items-center justify-center p-8">
+                        <i class="fas fa-briefcase text-8xl text-yellow-300"></i>
+                    </div>
+                    <div class="md:w-1/2 p-8">
+                        <h2 class="text-3xl font-bold text-yellow-300 mb-4">Job Opportunities Portal</h2>
+                        <p class="text-gray-300 mb-6">
+                            A comprehensive job portal connecting job seekers with employers. Features include job listings, application tracking, and resume building tools. The platform focuses on helping underserved communities find employment opportunities with an easy-to-use interface and personalized job recommendations.
+                        </p>
+                        
+                        <div class="mb-6">
+                            <span class="project-tag">Job Listings</span>
+                            <span class="project-tag">Application System</span>
+                            <span class="project-tag">User Profiles</span>
+                            <span class="project-tag">Career Resources</span>
+                        </div>
+                        
+                        <div class="flex flex-wrap gap-3">
+                            <a href="https://vkboss49264.github.io/business-website/" target="_blank" class="px-4 py-2 bg-yellow-300 text-gray-900 rounded hover:bg-yellow-400 transition-colors font-medium">
+                                Live Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Other Projects -->
+        <section class="max-w-5xl mx-auto mb-16">
+            <h2 class="text-3xl font-bold mb-8 text-center">
+                <span class="border-b-4 border-yellow-300 pb-2">Other Projects</span>
+            </h2>
+            
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="card rounded-xl p-6">
+                    <h3 class="text-xl font-bold text-yellow-300 mb-3">Weather Dashboard</h3>
+                    <p class="text-gray-400 mb-4">
+                        A responsive weather application providing current conditions and 5-day forecasts using data from the OpenWeather API. Features location search and temperature unit toggling.
+                    </p>
+                    <div class="mb-4">
+                        <span class="project-tag">API Integration</span>
+                        <span class="project-tag">Responsive Design</span>
+                        <span class="project-tag">Local Storage</span>
+                    </div>
+                </div>
+                
+                <div class="card rounded-xl p-6">
+                    <h3 class="text-xl font-bold text-yellow-300 mb-3">Task Management App</h3>
+                    <p class="text-gray-400 mb-4">
+                        A productivity application with task categorization, priority levels, and deadline reminders. Implements drag-and-drop functionality for organizing tasks.
+                    </p>
+                    <div class="mb-4">
+                        <span class="project-tag">CRUD Operations</span>
+                        <span class="project-tag">Drag & Drop</span>
+                        <span class="project-tag">Priority System</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action -->
+        <section class="text-center">
+            <h2 class="text-2xl font-bold mb-4">Have a project in mind?</h2>
+            <a href="contact.html" class="inline-block px-6 py-3 bg-yellow-300 text-gray-900 rounded-lg font-bold hover:bg-yellow-400 transition-colors">
+                Let's Discuss
+            </a>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-black bg-opacity-80 py-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <h3 class="text-2xl font-bold text-yellow-300">Vishal Kumar</h3>
+                    <p class="text-gray-400">Web Developer & CS Student</p>
+                </div>
+                
+                <div class="flex space-x-6">
+                    <a href="https://github.com/vkboss49264" target="_blank" class="text-gray-400 hover:text-yellow-300 text-xl">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/vishal-kumar-b8b056297" target="_blank" class="text-gray-400 hover:text-yellow-300 text-xl">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://www.instagram.com/v_i_s_h_a_l_1827" target="_blank" class="text-gray-400 hover:text-yellow-300 text-xl">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-6 pt-6 text-center text-gray-500 text-sm">
+                <p>&copy; <span id="year"></span> Vishal Kumar (VK18). All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Set current year in footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
 </body>
 </html>
