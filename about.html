@@ -3,87 +3,278 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Me - Vishal Kumar</title>
+    <title>About - Vishal Kumar (VK18)</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Learn more about Vishal Kumar (VK18), a web developer and computer science student with expertise in JavaScript, Node.js, and Python.">
+    
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
     <style>
-        @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(30px); }
-            to { opacity: 1; transform: translateY(0); }
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
         }
-        .animate-fadeInUp {
-            animation: fadeInUp 1s ease-in-out;
+        
+        .gradient-bg {
+            background: linear-gradient(-45deg, #4f46e5, #8b5cf6, #ec4899, #ef4444);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+        }
+        
+        .card {
+            transition: all 0.3s ease;
+            background: rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(10px);
+        }
+        
+        .nav-link {
+            position: relative;
+        }
+        
+        .nav-link:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background-color: #fbbf24;
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover:after {
+            width: 100%;
+        }
+        
+        .section {
+            scroll-margin-top: 80px;
         }
     </style>
 </head>
-<body class="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 text-white">
-    
+<body class="gradient-bg text-white min-h-screen flex flex-col">
     <!-- Navigation -->
-    <nav class="flex justify-between p-6 bg-gray-800 shadow-lg fixed w-full top-0 z-50">
-        <h1 class="text-3xl font-extrabold text-blue-400">Vishal Kumar</h1>
-        <ul class="flex space-x-6 text-lg">
-            <li><a href="index.html" class="hover:text-blue-400 transition duration-300">Home</a></li>
-            <li><a href="about.html" class="hover:text-blue-400 transition duration-300">About</a></li>
-            <li><a href="projects.html" class="hover:text-blue-400 transition duration-300">Projects</a></li>
-            <li><a href="contact.html" class="hover:text-blue-400 transition duration-300">Contact</a></li>
-        </ul>
+    <nav class="sticky top-0 z-50 bg-black bg-opacity-80 backdrop-blur-md shadow-md">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold text-yellow-300">VK18</a>
+            
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex space-x-8">
+                <a href="index.html" class="nav-link text-white hover:text-yellow-300">Home</a>
+                <a href="about.html" class="nav-link text-yellow-300 font-medium">About</a>
+                <a href="projects.html" class="nav-link text-white hover:text-yellow-300">Projects</a>
+                <a href="contact.html" class="nav-link text-white hover:text-yellow-300">Contact</a>
+            </div>
+            
+            <!-- Mobile menu button -->
+            <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-black bg-opacity-90">
+            <div class="container mx-auto px-4 py-3 flex flex-col space-y-3">
+                <a href="index.html" class="text-white hover:text-yellow-300 py-2">Home</a>
+                <a href="about.html" class="text-yellow-300 font-medium py-2">About</a>
+                <a href="projects.html" class="text-white hover:text-yellow-300 py-2">Projects</a>
+                <a href="contact.html" class="text-white hover:text-yellow-300 py-2">Contact</a>
+            </div>
+        </div>
     </nav>
-    
-    <!-- About Me Section -->
-    <section class="mt-20 text-center px-8 animate-fadeInUp">
-        <h1 class="text-5xl font-bold text-blue-400">About Me</h1>
-        <p class="mt-6 text-xl max-w-4xl mx-auto leading-relaxed">
-            Hello! I'm <span class="text-blue-300 font-semibold">Vishal Kumar</span>, a passionate <span class="text-blue-300 font-semibold">Full-Stack Developer</span> who loves to build web applications and create impactful digital experiences. My expertise spans multiple technologies, from frontend frameworks to backend systems.
-        </p>
-    </section>
 
-    <!-- Skills Section -->
-    <section class="mt-16 px-10 max-w-6xl mx-auto animate-fadeInUp">
-        <h2 class="text-4xl font-bold text-center text-blue-400">Technical Skills</h2>
-        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-8 text-center">
-            <div class="p-6 bg-gray-800 rounded-lg shadow-lg hover:scale-105 transition duration-300">
-                <h3 class="text-xl font-semibold">C, C++, Python</h3>
+    <main class="flex-grow container mx-auto px-4 py-8">
+        <!-- About Hero -->
+        <section class="text-center py-12">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">
+                About <span class="text-yellow-300">Vishal Kumar</span>
+            </h1>
+            <p class="text-xl text-gray-300 max-w-2xl mx-auto">
+                Web Developer | Computer Science Student | Problem Solver
+            </p>
+        </section>
+
+        <!-- Bio Section -->
+        <section class="max-w-4xl mx-auto mb-16">
+            <div class="card rounded-xl p-8">
+                <h2 class="text-3xl font-bold mb-6 text-yellow-300">My Journey</h2>
+                
+                <div class="space-y-6">
+                    <p class="text-lg leading-relaxed">
+                        I'm currently pursuing my <span class="text-yellow-300 font-medium">B.Tech in Computer Science and Engineering</span> at Dronacharya College, where I've developed a strong foundation in algorithms, data structures, and software engineering principles.
+                    </p>
+                    
+                    <p class="text-lg leading-relaxed">
+                        My passion for web development began when I built my first website. Since then, I've immersed myself in learning modern web technologies, focusing on creating efficient, scalable, and user-friendly applications.
+                    </p>
+                    
+                    <p class="text-lg leading-relaxed">
+                        What drives me is the ability to solve real-world problems through code. I particularly enjoy the creative process of transforming ideas into functional, beautiful digital experiences.
+                    </p>
+                </div>
             </div>
-            <div class="p-6 bg-gray-800 rounded-lg shadow-lg hover:scale-105 transition duration-300">
-                <h3 class="text-xl font-semibold">HTML, CSS, JavaScript</h3>
+        </section>
+
+        <!-- Education & Experience -->
+        <section class="max-w-4xl mx-auto mb-16">
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Education -->
+                <div class="card rounded-xl p-6">
+                    <h3 class="text-2xl font-bold mb-4 text-yellow-300">
+                        <i class="fas fa-graduation-cap mr-2"></i> Education
+                    </h3>
+                    
+                    <div class="space-y-4">
+                        <div>
+                            <h4 class="font-bold text-lg">B.Tech in Computer Science</h4>
+                            <p class="text-gray-400">Dronacharya College</p>
+                            <p class="text-gray-400 text-sm">2021 - Present</p>
+                        </div>
+                        
+                        <div>
+                            <h4 class="font-bold text-lg">High School Diploma</h4>
+                            <p class="text-gray-400">CBSE Board</p>
+                            <p class="text-gray-400 text-sm">Graduated 2020</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Skills -->
+                <div class="card rounded-xl p-6">
+                    <h3 class="text-2xl font-bold mb-4 text-yellow-300">
+                        <i class="fas fa-code mr-2"></i> Technical Skills
+                    </h3>
+                    
+                    <div class="space-y-4">
+                        <div>
+                            <h4 class="font-bold">Frontend Development</h4>
+                            <p class="text-gray-400">HTML5, CSS3, JavaScript, React, Tailwind CSS</p>
+                        </div>
+                        
+                        <div>
+                            <h4 class="font-bold">Backend Development</h4>
+                            <p class="text-gray-400">Node.js, Express, Python, REST APIs</p>
+                        </div>
+                        
+                        <div>
+                            <h4 class="font-bold">Database & Tools</h4>
+                            <p class="text-gray-400">MongoDB, MySQL, Git, VS Code</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="p-6 bg-gray-800 rounded-lg shadow-lg hover:scale-105 transition duration-300">
-                <h3 class="text-xl font-semibold">Node.js, Firebase</h3>
+        </section>
+
+        <!-- Approach -->
+        <section class="max-w-4xl mx-auto">
+            <div class="card rounded-xl p-8">
+                <h2 class="text-3xl font-bold mb-6 text-yellow-300">My Approach</h2>
+                
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="flex items-start">
+                        <div class="text-yellow-300 mr-4 mt-1">
+                            <i class="fas fa-lightbulb text-2xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold mb-2">Problem-Solving First</h3>
+                            <p class="text-gray-300">
+                                I focus on understanding the core problem before writing code, ensuring my solutions are both effective and efficient.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start">
+                        <div class="text-yellow-300 mr-4 mt-1">
+                            <i class="fas fa-users text-2xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold mb-2">User-Centered Design</h3>
+                            <p class="text-gray-300">
+                                Every project begins with the end-user in mind, creating intuitive interfaces and seamless experiences.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start">
+                        <div class="text-yellow-300 mr-4 mt-1">
+                            <i class="fas fa-cogs text-2xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold mb-2">Clean Code</h3>
+                            <p class="text-gray-300">
+                                I write maintainable, well-documented code following best practices and design patterns.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start">
+                        <div class="text-yellow-300 mr-4 mt-1">
+                            <i class="fas fa-book text-2xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold mb-2">Continuous Learning</h3>
+                            <p class="text-gray-300">
+                                I stay updated with the latest technologies and frameworks through courses and personal projects.
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="p-6 bg-gray-800 rounded-lg shadow-lg hover:scale-105 transition duration-300">
-                <h3 class="text-xl font-semibold">Database Management</h3>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Projects Section -->
-    <section class="mt-16 px-10 max-w-6xl mx-auto animate-fadeInUp">
-        <h2 class="text-4xl font-bold text-center text-blue-400">Projects</h2>
-        <div class="grid md:grid-cols-2 gap-8 mt-8">
-            <div class="bg-gray-800 p-6 rounded-lg shadow-lg hover:scale-105 transition duration-300">
-                <h3 class="text-2xl font-bold text-blue-300">Video Player Website</h3>
-                <p class="mt-2">A distraction-free video platform for students.</p>
-                <a href="https://vkboss49264.github.io/videosplayer/" class="text-blue-400 mt-2 inline-block">View Project →</a>
-            </div>
-            <div class="bg-gray-800 p-6 rounded-lg shadow-lg hover:scale-105 transition duration-300">
-                <h3 class="text-2xl font-bold text-blue-300">Job Opportunities Website</h3>
-                <p class="mt-2">Helping underprivileged individuals find jobs.</p>
-                <a href="https://vkboss49264.github.io/business-website/" class="text-blue-400 mt-2 inline-block">View Project →</a>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Contact Section -->
-    <section class="mt-16 text-center px-10 animate-fadeInUp">
-        <h2 class="text-4xl font-bold text-blue-400">Let's Connect</h2>
-        <p class="mt-4 text-lg max-w-3xl mx-auto">
-            Whether you have a project idea or just want to chat about web development, feel free to reach out!
-        </p>
-        <a href="contact.html" class="mt-6 inline-block bg-blue-500 hover:bg-blue-600 px-6 py-3 rounded-full text-white text-lg font-bold shadow-lg transition duration-300">Contact Me</a>
-    </section>
+        </section>
+
+        <!-- Call to Action -->
+        <section class="text-center mt-16">
+            <h2 class="text-2xl font-bold mb-4">Want to know more about my work?</h2>
+            <a href="projects.html" class="inline-block px-6 py-3 bg-yellow-300 text-gray-900 rounded-lg font-bold hover:bg-yellow-400 transition-colors">
+                View My Projects
+            </a>
+        </section>
+    </main>
 
     <!-- Footer -->
-    <footer class="mt-16 p-6 bg-gray-800 text-center text-gray-400">
-        &copy; 2025 Vishal Kumar. All Rights Reserved.
+    <footer class="bg-black bg-opacity-80 py-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <h3 class="text-2xl font-bold text-yellow-300">Vishal Kumar</h3>
+                    <p class="text-gray-400">Web Developer & CS Student</p>
+                </div>
+                
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-yellow-300 text-xl">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-yellow-300 text-xl">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-yellow-300 text-xl">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-6 pt-6 text-center text-gray-500 text-sm">
+                <p>&copy; <span id="year"></span> Vishal Kumar (VK18). All rights reserved.</p>
+            </div>
+        </div>
     </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Set current year in footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
 </body>
 </html>
